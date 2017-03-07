@@ -1,0 +1,24 @@
+Data structures and time,space complexity:
+
+I haved used hash map which provides time complexity of O(1),key of which includes physician_id and date.Its value
+is a linked list consisting of appointments(start_time,end_time,link to next appointment,patient_id).
+I have chosen such a data structure because:
+1)Hash maps provide manipulations in O(1)
+2)Hashmap consisting of appointments cant be created because searching for conflicts with existing appointments wont be possible.
+3)A particular value in hashmap consists of linked list consists of appointments for a particluar physician on a particular date,
+which will normally be of size 10-20.Even if the physician has 30 mins appointment over the whole day,total appointments will
+be 48.
+
+Searching,inserting,deleting rescheduling will be O(length of the linked list)=O(50)=O(1) because it takes constant time to go to the linked list in hashmapo(1).And to 
+traverse and delete,insert or reschedule(both insert and delete) will take O(length of the linked list).
+
+Space complexity=O(total appointments),as each appointment is stored exactly once.
+
+Limitation:
+The following code cant handle conflicts when a same patient is booking different appointments at the same time because i thought of it pretty late
+in the coding process(because it is kind of a rare scenario,as patients usually dont book two apppointments on same day and time with different physicians).
+Solution is to have a hashmap(alongside with original hashmap ) with key=patientid+date and value=linkedlist of appointments of that patient with different physicians.
+
+We are duplicating the data and each operation will be done twice one on each hashmap to keep both the hashmaps consistant.
+But time complextity will still be O(length of the linked list)=O(50)=O(1).
+And space complexity will be O(2 x total appointments.)
