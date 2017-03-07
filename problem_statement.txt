@@ -1,5 +1,4 @@
-The following exercise is expected to take you between 2 to 3 hours and it should be implemented in Java.  Please, pay close attention to the readability of your code and your data structures. We highly value clean code. We are not looking for a highly performant and optimized code but we expect that you understand and state the time and space complexity of your solution.
-
-This exercise is to write a program to manage a Calendar for a clinic. The program should allow us to create, remove and re-schedule appointments. An appointment has a physician and a patient associated with it, a date, a start and end time, description.
-When creating or re-scheduling appointment, we want the system to tell us about conflicts with existing appointments for that physician or patient.
-Please write a program that implements this functionality and provide unit tests for the basic use cases.
+ This exercise is to write a program to manage a Calendar for a clinic. The program should allow us to create, remove and re-schedule appointments. 
+ An appointment has a physician and a patient associated with it, a date, a start and end time, description. When creating or re-scheduling appointment,
+ we want the system to tell us about conflicts with existing appointments for that physician or patient. Please write a program that implements this 
+ functionality and provide unit tests for the basic use cases.
